@@ -79,88 +79,101 @@ body {
   width: 100%;
   transition: all 0.25s;
 }
-.check {
-  color: rgb(255, 255, 255, 0.9);
+.mid .por {
+  display: flex;
+  position: relative;
+
+}
+.mid {
   padding: 20px 40px;
 
 }
-.check h1 {
+.mid .por p {
+  color: rgba(255, 255, 255, 0.3);
+  margin: 5px 0;
+}
+.mid .por .line {
+  width: 100px;
+  height: 1px;
+  background-color: rgb(0, 255, 0);
+  position: absolute;
+  top: 50%;
+  left: 96px;
+  z-index: 5;
+}
+.mid h1 {
   color: #fff;
 }
-.check .check-content {
-  display: flex;
-  justify-content: center;
-}
-.check .check-content .col1,
-.check .check-content .col2 {
-  width: 50%;
-}
-.sumary h2, .education h2, .professional h2{
-  font-size: 28px;
-  margin-top: 20px;
-  color: #fff;
-}
-.alice, .master, .bachelor, .senior, .graphic {
-  display: flex;
-}
-.alice-left .circle,
-.master-left .circle,
-.bachelor-left .circle,
-.senior-left .circle,
-.graphic-left .circle {
-  width: 16px;
-  height: 16px;
-  background-color: rgb(0, 255, 0);
-  border-radius: 50%;
-  margin-top: 10px;
-}
-.alice-left .line,
-.master-left .line,
-.bachelor-left .line,
-.senior-left .line,
-.graphic-left .line {
-  width: 2px;
-  height: 95%;
-  background-color: rgb(0, 255, 0);
-  margin: 0 20px 0 7px;
-}
-.alice-right h3,
-.master-right h3,
-.bachelor-right h3,
-.senior-right h3, 
-.graphic-right h3 {
-  margin: 10px 0;
-  font-size: 18px;
-  color: rgb(0, 255, 0);
-}
-.alice-right ul,
-.senior-right ul,
-.graphic-right ul {
-  margin-left: 16px;
-}
-.alice-right ul li,
-.senior-right ul li,
-.graphic-right ul li {
-  margin: 10px 0;
-}
-.master-right .year,
-.bachelor-right .year,
-.senior-right .year,
-.graphic-right .year
- {
-  display: flex;
-  justify-content: center;
-  font-weight: 500;
-  border: 1px solid;
-  width: 35%;
-  background-color: rgba(255, 192, 181, 0.3);
-  padding: 5px;
-  margin-bottom: 16px;
-  border-radius: 3px;
+#click_all,
+#click_app,
+#click_card,
+#click_web {
+  display: none;
 }
 
-.master-right p,
-.bachelor-right p {
-  margin: 12px 0;
+.inside {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.content {
+  margin-bottom: 80px;
+}
+.text {
+  color: white;
+  padding: 7px 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  justify-content: center;
+  border-radius: 5px;
+  font-weight: bold;
+  margin: 0 10px;
 }
 
+/*  */
+.img_all,
+.img_app,
+.img_card,
+.img_web {
+  display: none;
+}
+
+.img_all img,
+.img_app img,
+.img_card img,
+.img_web img {
+  width: 30%;
+  margin: 48px 0 0 12px;
+  box-shadow: 0 0 10px rgba(1, 255, 115, 0.3);
+  border-radius: 5px;
+}
+
+/* Duong fix here  */
+#click_all:checked ~ * .img_all,
+#click_app:checked ~ * .img_app,
+#click_card:checked ~ * .img_card,
+#click_web:checked ~ * .img_web {
+  visibility: visible;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/*  */
+
+#click_all:checked ~ .text_all,
+#click_app:checked ~ .text_app,
+#click_card:checked ~ .text_card,
+#click_web:checked ~ .text_web {
+  background-color: rgb(65, 221, 135);
+  box-shadow: 0 0 5px rgb(65, 221, 135);
+}
+
+#click_all:hover ~ .text_all,
+#click_app:hover ~ .text_app,
+#click_card:hover ~ .text_card,
+#click_web:hover ~ .text_web {
+  background-color: rgb(65, 221, 135);
+  transition: 0.5s;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgb(65, 221, 135);
+}
