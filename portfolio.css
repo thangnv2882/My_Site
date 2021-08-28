@@ -74,7 +74,7 @@ body {
 }
 .nav-menu ul li:hover a {
   color: #fff;
-}
+} 
 .nav-menu ul li:hover a::after{
   width: 100%;
   transition: all 0.25s;
