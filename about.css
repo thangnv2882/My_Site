@@ -89,6 +89,7 @@ body {
 .learn h1 {
   padding-top: 20px;
   margin: 0 0 36px 0;
+  width: fit-content;
 }
 .learn .learn-preview {
   display: flex;
@@ -146,6 +147,10 @@ body {
   top: -18px;
   left: calc(50% - 18px);
 }
+.icon ion-icon {
+  width: 20px;
+  height: 20px;
+}
 .boxed h4 {
   margin-top: 32px;
   font-size: 36px;
@@ -170,39 +175,39 @@ body {
   top: 10px;
   left: 80px;
 }
-.skill-content .row {
+.col {
   display: flex;
   margin: 16px 0;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-.col h6 {
+/* .col h6 {
   font-size: 16px;
   padding: 10px 0;
+} */
+.col .item {
+  width: 48%;
+  margin-bottom: 12px;
 }
-.col .line1 {
-  display: flex;
-  justify-content: space-between;
-}
-.col .line-skill {
+.item .line-skill {
   height: 8px;
   border: 0px solid rgb(0, 255, 0);
   background-color: rgb(0, 0, 0, 0.2);
 }
-.col1, .col2 {
-  flex-direction: column;
-  display: flex;
-  justify-content: flex-start;
-  width: 45%;
-}
-.col .line-skill span {
+.item .line-skill span {
   height: 100%;
   float: left;
   background-color: rgb(0, 255, 0);
 }
-.col .line1 ion-icon {
-  position: absolute;
-  /* left: 44px; */
+.item .line1 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  margin-bottom: 8px;
 }
+/* .col .line1 ion-icon {
+  position: absolute;
+} */
 .html {
   width: 80%;
 }

@@ -32,7 +32,7 @@ body {
   width: 2px;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  animation: blink 0.5s steps(3) infinite;
+  animation: blink 0.4s steps(3) infinite;
 }
 @keyframes blink {
   0%, 75%{
@@ -46,16 +46,16 @@ body {
   color: #fff;
   font-size: 32px;
   margin-bottom: 28px;
-  animation: typing 14s steps(31) infinite;
   overflow: hidden;
   white-space: nowrap;
   position: relative;
+  animation: typing 10s steps(31) infinite;
 }
 @keyframes typing {
-  0%, 90%, 100%{
+  0%, 90%, 100% {
     width: 0px;
   }
-  50%, 80% {
+  40%, 80% {
     width: 600px;
   }
 }
